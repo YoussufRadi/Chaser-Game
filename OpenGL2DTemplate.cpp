@@ -1,4 +1,4 @@
-
+#include <windows.h>
 #include <math.h>
 #include <string>
 #include <glut.h>
@@ -400,12 +400,14 @@ void Anim()
 			score = score + (factor);
 			targetX1 = screenX / 2;
 			targetY1 = screenY / 2;
+			PlaySoundA((LPCSTR) "button-1.WAV", NULL, SND_FILENAME | SND_ASYNC);
 		}
 
 		if ((playerX - 50) <= targetX2 && (playerX + 50) >= targetX2 && (playerY - 25) <= targetY2 && (playerY + 25) >= targetY2){
 			score = score + (factor);
 			targetX2 = screenX / 2;
 			targetY2 = screenY / 2;
+			PlaySoundA((LPCSTR) "button-1.WAV", NULL, SND_FILENAME | SND_ASYNC);
 		}
 
 		if ((playerX - 50) <= chaserX1 && (playerX + 50) >= chaserX1 && (playerY - 25) <= chaserY1 && (playerY + 25) >= chaserY1){
@@ -415,6 +417,7 @@ void Anim()
 				score = score - (factor);
 				chaserX1 = 0;
 				chaserY1 = 0;
+				PlaySoundA((LPCSTR) "button-3.WAV", NULL, SND_FILENAME | SND_ASYNC);
 			}
 		}
 
@@ -425,6 +428,7 @@ void Anim()
 				score = score - (factor);
 				chaserX2 = 0;
 				chaserY2 = screenY;
+				PlaySoundA((LPCSTR) "button-3.WAV", NULL, SND_FILENAME | SND_ASYNC);
 			}
 		}
 
