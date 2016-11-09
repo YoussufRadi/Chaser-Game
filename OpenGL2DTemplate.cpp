@@ -70,6 +70,8 @@ void startAgain(){
 	timer = 0;
 	specialPower = false;
 	factor = 1;
+	type = 0;
+	timerStart = 0;
 }
 
 void scoredisplay(float x, float y, void *font, const char *string){
@@ -182,7 +184,7 @@ void Display()
 		glVertex3f(0.0f, 0.0f, 0.0f);
 		glColor3f(0.0f, 0.0f, 0.0f);
 		glVertex3f(50.0f, 0.0f, 0.0f);
-		glColor3f(0.0f, 0.0f, 0.0f);
+		glColor3f(1.0f, 1.0f, 1.0f);
 		glVertex3f(75.0f, 25.0f, 0.0f);
 		glColor3f(0.0f, 0.0f, 0.0f);
 		glVertex3f(50.0f, 50.0f, 0.0f);
@@ -200,7 +202,7 @@ void Display()
 		glVertex3f(0.0f, 0.0f, 0.0f);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		glVertex3f(50.0f, 0.0f, 0.0f);
-		glColor3f(1.0f, 0.0f, 0.0f);
+		glColor3f(1.0f, 1.0f, 0.0f);
 		glVertex3f(75.0f, 25.0f, 0.0f);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		glVertex3f(50.0f, 50.0f, 0.0f);
@@ -218,7 +220,7 @@ void Display()
 		glVertex3f(0.0f, 0.0f, 0.0f);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		glVertex3f(50.0f, 0.0f, 0.0f);
-		glColor3f(1.0f, 0.0f, 0.0f);
+		glColor3f(1.0f, 1.0f, 0.0f);
 		glVertex3f(75.0f, 25.0f, 0.0f);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		glVertex3f(50.0f, 50.0f, 0.0f);
@@ -236,7 +238,7 @@ void Display()
 		glVertex3f(0.0f, 0.0f, 0.0f);
 		glColor3f(0.5f, 1.0f, 0.2f);
 		glVertex3f(50.0f, 0.0f, 0.0f);
-		glColor3f(0.5f, 1.0f, 0.2f);
+		glColor3f(0.5f, 0.0f, 0.2f);
 		glVertex3f(75.0f, 25.0f, 0.0f);
 		glColor3f(0.5f, 1.0f, 0.2f);
 		glVertex3f(50.0f, 50.0f, 0.0f);
@@ -254,7 +256,7 @@ void Display()
 		glVertex3f(0.0f, 0.0f, 0.0f);
 		glColor3f(0.5f, 1.0f, 0.2f);
 		glVertex3f(50.0f, 0.0f, 0.0f);
-		glColor3f(0.5f, 1.0f, 0.2f);
+		glColor3f(0.5f, 0.0f, 0.2f);
 		glVertex3f(75.0f, 25.0f, 0.0f);
 		glColor3f(0.5f, 1.0f, 0.2f);
 		glVertex3f(50.0f, 50.0f, 0.0f);
@@ -437,7 +439,7 @@ void Anim()
 	
 	
 
-	for (int i = 0; i < 1000000; i++);
+	for (int i = 0; i < 100000; i++);
 	glutPostRedisplay();
 }
 
