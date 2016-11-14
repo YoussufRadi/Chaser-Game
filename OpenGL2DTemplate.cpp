@@ -450,8 +450,6 @@ void main(int argc, char** argr)
 	glutInitWindowSize(screenX, screenY);
 	glutCreateWindow("Control");
 	glutFullScreen();
-	glutDisplayFunc(Display);
-	glutIdleFunc(Anim);
 	glutSetCursor(GLUT_CURSOR_NONE);
 	glutPassiveMotionFunc(passM);
 				//call the passive motion function
